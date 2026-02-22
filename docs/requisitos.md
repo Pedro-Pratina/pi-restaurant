@@ -1,7 +1,7 @@
 # Requisitos do Projeto - PI-Restaurant
 
-**Versão:** 1.0 – Inicial (só funcionalidades principais) 
-**Data:** 21 de fevereiro de 2026
+**Versão:** 1.0 – Inicial
+**Data:** 22 de fevereiro de 2026
 **Responsável (PM):** Pedro Reis
 
 ## 1. Requisitos Funcionais
@@ -26,7 +26,11 @@
 
 - Responsivo: Funcional em mobile, tablet e desktop.
 - Performace: Sem erros no console, imagens otimizadas.
-- Tema visual: A decidir na reunião - 21/02/2026 21:00.
+- Tema visual:
+    - **Paleta de cores principal**: Vermelho, preto e branco (inspirado no vermelho característico do Akindo Sushiro).
+    - **Site de inspiração**: [Akindo Sushiro](https://www.akindo-sushiro.co.jp/en/).
+    - **Responsável pela criação**: [@devmarcusrodrigues](https://github.com/devmarcusrodrigues) (UX/UI) – ele vai criar a paleta final, fontes sugeridas (Google Fonts), ícones e moodboard.
+    - **Alterações**: Qualquer mudança significativa na paleta ou estilo será avaliada e aprovada pelo PM [(Pedro-Pratina)](https://github.com/Pedro-Pratina) antes de implementar.
 - Código: Limpo, sem duplicação excessiva.
 - Persistência: Usar localStorage para carrinho (solução temporária), status do pedido e avaliações (não perde ao atualizar página).
 
