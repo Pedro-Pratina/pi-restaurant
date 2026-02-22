@@ -13,12 +13,12 @@ Restaurante escolhido: "Nu Sushi Delivery"
 
 ## Integrantes do Grupo
 - Pedro Reis – Product Manager (PM) / Coordenação geral
-    [@Pedro-Pratina] (https://github.com/Pedro-Pratina)
+    [@Pedro-Pratina](https://github.com/Pedro-Pratina)
 - Marcus Rogério – UX/UI Design
-    [@devmarcusrodrigues] (https://github.com/devmarcusrodrigues)
+    [@devmarcusrodrigues](https://github.com/devmarcusrodrigues)
 - Eduardo Bezerra – Desenvolvimento Frontend (HTML/CSS/JavaScript)
-    [@Ujhafsuy] (https://github.com/Ujhafsuy)
+    [@Ujhafsuy](https://github.com/Ujhafsuy)
 - Rafael Henrique – Desenvolvimento Frontend (HTML/CSS/JavaScript)
-    [@BlightCr] (https://github.com/BlightCr)
+    [@BlightCr](https://github.com/BlightCr)
 - Derek Lacerda – QA / Testes e Qualidade
-    [@Derek013243] (https://github.com/Derek013243)
+    [@Derek013243](https://github.com/Derek013243)
