@@ -1,0 +1,21 @@
+:root {
+    /* ==== Home ==== */
+    --color-home-title: #1c1917;
+    --color-home-btn-bg: #dc2626;
+    --color-home-btn-hover: #b91c1c;
+
+    /* ==== Home History ==== */
+    --color-history-text: #78716c;
+
+    /* ==== Home Gallery ==== */
+    --color-galeria-bg: #f5f5f4;
+
+    /* ==== Home Reviews ==== */
+    --color-review-text: #57534e;
+    --color-review-star: #f59e0b;
+    --color-review-border: #e7e5e4;
+
+    /* ==== Home CTA   ==== */
+    --color-cta-bg: #dc2626;
+    --color-cta-label: #dc2626;
+}
