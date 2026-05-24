@@ -1,141 +1,304 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <title>Nu Sushi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Nu Sushi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../script.js" defer></script>
+    <script type="module" src="../assets/scripts/carrinho-loja.js" defer></script>
+  </head>
+  <body>
     <div class="menu-page">
-  <!-- Header -->
-  <header class="menu-header">
-    <div class="container">
-      <h1 class="menu-title">Nosso Cardápio</h1>
-      <p class="menu-subtitle">
-        Selecione seus pratos favoritos e faça seu pedido
-      </p>
-    </div>
-  </header>
+      <!-- Header Início -->
+      <header>
+        <nav class="mobile">
+          <a href="/index.html" class="logo">Nu Sushi</a>
+          <button type="button" class="menu-toggle" aria-label="Abrir menu">
+            <img src="../assets/images/menu.svg" alt="Menu" />
+          </button>
+          <div class="menu_mobile" aria-label="Menu móvel">
+            <a href="/index.html">Home</a>
+            <a href="./cardapio.html">Cardápio</a>
+            <a href="./carrinho.html">Carrinho</a>
+            <a href="./login.html">Login</a>
+          </div>
+        </nav>
+        <nav class="desk">
+          <a href="/index.html" class="logo">Nu Sushi</a>
 
-  <main class="container menu-content">
-    <!-- Search -->
-    <search class="search-container">
-      <div class="search-wrapper">
-        <input
-          type="search"
-          placeholder="Buscar pratos..."
-          class="search-input"
-          aria-label="Buscar pratos"
-        />
+          <div class="paginas">
+            <a data-page="home" href="/index.html">Home</a>
+            <a data-page="cardapio" href="./pages/cardapio.html">Cardápio</a>
+          </div>
+
+          <div class="nav_icons paginas">
+            <a href="./pages/carrinho.html">
+              <img src="../assets/images/cart.svg" alt="Carrinho" />
+            </a>
+            <a href="./pages/login.html">
+              <img src="../assets/images/person.svg" alt="Login" />
+            </a>
+          </div>
+        </nav>
+      </header>
+      <div class="header-container">
+        <div class="container">
+          <h1 class="menu-title">Nosso Cardápio</h1>
+          <p class="menu-subtitle">
+            Selecione seus pratos favoritos e faça seu pedido
+          </p>
+        </div>
       </div>
-    </search>
+      <!-- Header Fim -->
 
-    <!-- Category Filter -->
-    <nav class="category-filter" aria-label="Filtro por categoria">
-      <ul role="list">
-        <li><button class="category-button active" aria-pressed="true">Todos</button></li>
-        <li><button class="category-button" aria-pressed="false">Sushi</button></li>
-        <li><button class="category-button" aria-pressed="false">Sashimi</button></li>
-        <li><button class="category-button" aria-pressed="false">Temaki</button></li>
-        <li><button class="category-button" aria-pressed="false">Pratos Quentes</button></li>
-        <li><button class="category-button" aria-pressed="false">Bebidas</button></li>
-      </ul>
-    </nav>
-
-    <!-- Products Grid -->
-    <ul class="products-grid" role="list">
-
-      <!-- Product Card -->
-      <li class="product-card">
-        <article>
-          <figure class="product-image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1630748662890-11623a758d6e?..."
-              alt="Combinação premium de sushi com salmão, atum e peixe branco"
-              class="product-image"
-              loading="lazy"
+      <main class="container menu-content">
+        <!-- Search -->
+        <search class="search-container">
+          <div class="search-wrapper">
+            <input
+              type="search"
+              placeholder="Buscar pratos..."
+              class="search-input"
+              aria-label="Buscar pratos"
             />
-          </figure>
-          <div class="product-content">
-            <h2 class="product-title">Sushi Premium Mix</h2>
-            <p class="product-description">
-              Combinação premium de sushi com salmão, atum e peixe branco
-            </p>
-            <footer class="product-footer">
-              <span class="product-price">
-                <data value="68.90">R$ 68,90</data>
-              </span>
-              <button class="product-button" type="button" aria-label="Adicionar Sushi Premium Mix ao pedido">
-                Adicionar
-              </button>
-            </footer>
           </div>
-        </article>
-      </li>
+        </search>
 
-      <!-- Product Card -->
-      <li class="product-card">
-        <article>
-          <figure class="product-image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1680675228874-9b9963812b7c?..."
-              alt="Nigiri tradicional com fatias frescas de salmão"
-              class="product-image"
-              loading="lazy"
-            />
-          </figure>
-          <div class="product-content">
-            <h2 class="product-title">Nigiri de Salmão</h2>
-            <p class="product-description">
-              Nigiri tradicional com fatias frescas de salmão
-            </p>
-            <footer class="product-footer">
-              <span class="product-price">
-                <data value="32.90">R$ 32,90</data>
-              </span>
-              <button class="product-button" type="button" aria-label="Adicionar Nigiri de Salmão ao pedido">
-                Adicionar
+        <!-- Category Filter -->
+        <nav class="category-filter" aria-label="Filtro por categoria">
+          <ul role="list">
+            <li>
+              <button class="category-button active" aria-pressed="true">
+                Todos
               </button>
-            </footer>
-          </div>
-        </article>
-      </li>
-
-      <!-- Product Card -->
-      <li class="product-card">
-        <article>
-          <figure class="product-image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?..."
-              alt="California Roll com kani, pepino e abacate"
-              class="product-image"
-              loading="lazy"
-            />
-          </figure>
-          <div class="product-content">
-            <h2 class="product-title">California Roll</h2>
-            <p class="product-description">
-              Clássico roll com kani, pepino e abacate
-            </p>
-            <footer class="product-footer">
-              <span class="product-price">
-                <data value="28.90">R$ 28,90</data>
-              </span>
-              <button class="product-button" type="button" aria-label="Adicionar California Roll ao pedido">
-                Adicionar
+            </li>
+            <li>
+              <button class="category-button" aria-pressed="false">
+                Sushi
               </button>
-            </footer>
-          </div>
-        </article>
-      </li>
+            </li>
+            <li>
+              <button class="category-button" aria-pressed="false">
+                Sashimi
+              </button>
+            </li>
+            <li>
+              <button class="category-button" aria-pressed="false">
+                Temaki
+              </button>
+            </li>
+            <li>
+              <button class="category-button" aria-pressed="false">
+                Pratos Quentes
+              </button>
+            </li>
+            <li>
+              <button class="category-button" aria-pressed="false">
+                Bebidas
+              </button>
+            </li>
+          </ul>
+        </nav>
 
-    </ul>
-  </main>
-</div>
-</body>
+        <!-- Products Grid -->
+        <section>
+          <ul class="products-grid" role="list">
+            <!-- Product Card -->
+            <li class="product-card" data-id="sushi-premium-mix">
+              <article>
+                <figure class="product-image-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1630748662890-11623a758d6e?..."
+                    alt="Combinação premium de sushi com salmão, atum e peixe branco"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="product-content">
+                  <h2 class="product-title">Sushi Premium Mix</h2>
+                  <p class="product-description">
+                    Combinação premium de sushi com salmão, atum e peixe branco
+                  </p>
+                  <div class="product-footer">
+                    <span class="product-price">
+                      <data value="68.90">R$ 68,90</data>
+                    </span>
+                    <button
+                      class="product-button"
+                      type="button"
+                      aria-label="Adicionar Sushi Premium Mix ao pedido"
+                    >
+                      Adicionar
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Product Card -->
+            <li class="product-card" data-id="nigiri-salmao">
+              <article>
+                <figure class="product-image-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1680675228874-9b9963812b7c?..."
+                    alt="Nigiri tradicional com fatias frescas de salmão"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="product-content">
+                  <h2 class="product-title">Nigiri de Salmão</h2>
+                  <p class="product-description">
+                    Nigiri tradicional com fatias frescas de salmão
+                  </p>
+                  <div class="product-footer">
+                    <span class="product-price">
+                      <data value="32.90">R$ 32,90</data>
+                    </span>
+                    <button
+                      class="product-button"
+                      type="button"
+                      aria-label="Adicionar Nigiri de Salmão ao pedido"
+                    >
+                      Adicionar
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Product Card -->
+            <li class="product-card" data-id="california-roll">
+              <article>
+                <figure class="product-image-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?..."
+                    alt="California Roll com kani, pepino e abacate"
+                    class="product-image"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="product-content">
+                  <h2 class="product-title">California Roll</h2>
+                  <p class="product-description">
+                    Clássico roll com kani, pepino e abacate
+                  </p>
+                  <div class="product-footer">
+                    <span class="product-price">
+                      <data value="28.90">R$ 28,90</data>
+                    </span>
+                    <button
+                      class="product-button"
+                      type="button"
+                      aria-label="Adicionar California Roll ao pedido"
+                    >
+                      Adicionar
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <!-- Coluna: Endereço -->
+          <div class="footer__col">
+            <div class="footer__col-header">
+              <div class="footer__col-icon">
+                <img src="../assets/images/pin.svg" alt="Endereço" />
+              </div>
+              <span class="footer__col-title">Endereço</span>
+            </div>
+            <div class="footer__col-body">
+              <p>Rua das Cerejeiras, 456</p>
+              <p>Liberdade, São Paulo – SP</p>
+              <p>CEP: 01503-001</p>
+            </div>
+          </div>
+
+          <div class="footer__divider-v"></div>
+
+          <!-- Coluna: Contato -->
+          <div class="footer__col">
+            <div class="footer__col-header">
+              <div class="footer__col-icon">
+                <img src="../assets/images/phone.svg" alt="Telefone" />
+              </div>
+              <span class="footer__col-title">Contato</span>
+            </div>
+            <div class="footer__col-body">
+              <p><a href="tel:+551134567890">(11) 3456-7890</a></p>
+              <p>
+                <a href="mailto:contato@nusushi.com.br"
+                  >contato@nusushi.com.br</a
+                >
+              </p>
+              <div class="footer__social">
+                <!-- Instagram -->
+                <a class="footer__social-link" href="#" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle
+                      cx="17.5"
+                      cy="6.5"
+                      r="0.5"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                  </svg>
+                </a>
+                <!-- Facebook -->
+                <a class="footer__social-link" href="#" aria-label="Facebook">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__divider-v"></div>
+
+          <!-- Coluna: Horário -->
+          <div class="footer__col">
+            <div class="footer__col-header">
+              <div class="footer__col-icon">
+                <img src="../assets/images/clock.svg" alt="" />
+              </div>
+              <span class="footer__col-title">Horário de Funcionamento</span>
+            </div>
+            <div class="footer__col-body">
+              <div class="footer__schedule-item">
+                <span class="footer__schedule-days">Segunda a Sexta</span>
+                <span class="footer__schedule-hours">11h – 23h</span>
+              </div>
+              <div class="footer__schedule-item">
+                <span class="footer__schedule-days">Sábado e Domingo</span>
+                <span class="footer__schedule-hours">12h – 00h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__divider-h"></div>
+
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            © 2026 <span>Nu Sushi</span>. Tradição japonesa desde 1995.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

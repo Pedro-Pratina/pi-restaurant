@@ -1,8 +1,8 @@
 :root {
     /* ==== Home ==== */
     --color-home-title: #1c1917;
-    --color-home-btn-bg: #dc2626;
-    --color-home-btn-hover: #b91c1c;
+    --color-home-btn-bg: #b91c1c;
+    --color-home-btn-hover: #dc2626;
 
     /* ==== Home History ==== */
     --color-history-text: #78716c;

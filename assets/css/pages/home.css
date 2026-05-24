@@ -56,6 +56,7 @@
     text-decoration: none;
     border: none;
     cursor: pointer;
+    border-radius:0.5rem;
 }
  
 .btn-primary:hover {

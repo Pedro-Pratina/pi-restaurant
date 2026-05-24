@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/pages/carrinho.css" />
+  <title>Nu Sushi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="../script.js" defer></script>
+  <script type="module" src="../assets/scripts/carrinho.js" defer></script>
+</head>
+<body>
+    <div class="content">
+  <!-- Header Início -->
+  <header>
+    <nav class="mobile">
+      <a href="/index.html" class="logo">Nu Sushi</a>
+      <button type="button" class="menu-toggle" aria-label="Abrir menu">
+        <img src="../assets/images/menu.svg" alt="Menu">
+      </button>
+      <div class="menu_mobile" aria-label="Menu móvel">
+        <a href="/index.html">Home</a>
+        <a href="./cardapio.html">Cardápio</a>
+        <a href="./carrinho.html">Carrinho</a>
+        <a href="./login.html">Login</a>
+      </div>
+    </nav>
+    <nav class="desk">
+      <a href="/index.html" class="logo">Nu Sushi</a>
+
+      <div class="paginas">
+        <a data-page="home" href="/index.html">Home</a>
+        <a data-page="cardapio" href="./cardapio.html">Cardápio</a>
+      </div>
+
+      <div class="nav_icons paginas">
+        <a href="./carrinho.html">
+          <img src="../assets/images/cart.svg" alt="Carrinho">
+        </a>
+        <a href="./login.html">
+          <img src="../assets/images/person.svg" alt="Login">
+        </a>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Fim -->
+   <main class="cart-page">
+    <!-- Carrinho Vazio -->
+    <section id="cart-empty" class="cart-empty" style="display:none;">
+        <img src="../assets/images/bag.svg" alt="Sacola de compras" class="empty-cart-icon">
+        <h1>Seu carrinho está vazio</h1>
+        <p>Adicione itens do nosso cardápio para começar seu pedido.</p>
+        <a href="./cardapio.html" class="btn-primary">
+               Ver Cardápio
+               <span>›</span>
+        </a>
+    </section>
+
+    <!-- Carrinho com Itens -->
+     <div id="cart-main" class="cart-grid" style="display:none;">
+
+    <!-- lista de itens -->
+    <div class="lg-col-2">
+      <div id="cart-items" class="cart-items"></div>
+
+      <!--
+        DEMONSTRAÇÃO: também disponível quando há itens
+      -->
+      <div style="margin-top: 24px; padding: 16px; background: #fff; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07);">
+        <p style="font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">
+          Demo – Adicionar mais itens
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <button class="btn btn--outline demo-add"
+            data-id="1" data-name="Temaki Salmão" data-price="24.90"
+            data-image="https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=200&q=80">
+            + Temaki Salmão
+          </button>
+          <button class="btn btn--outline demo-add"
+            data-id="2" data-name="Uramaki Filadélfia" data-price="32.00"
+            data-image="https://images.unsplash.com/photo-1553621042-f6e147245754?w=200&q=80">
+            + Uramaki Filadélfia
+          </button>
+          <button class="btn btn--outline demo-add"
+            data-id="3" data-name="Sashimi Atum" data-price="41.50"
+            data-image="https://images.unsplash.com/photo-1534482421-64566f976cfa?w=200&q=80">
+            + Sashimi Atum
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- resumo lateral -->
+    <div class="cart-summary">
+      <h2 class="cart-summary__title">Resumo do Pedido</h2>
+
+      <!-- cupom -->
+      <label class="coupon-label" for="coupon-input">Cupom de desconto</label>
+      <div class="coupon-row">
+        <input
+          id="coupon-input"
+          class="coupon-input"
+          type="text"
+          placeholder="Ex: PRIMEIRACOMPRA"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="coupon-btn" class="btn btn--outline">Aplicar</button>
+      </div>
+      <p id="coupon-msg" class="coupon-msg"></p>
+
+      <!-- progresso frete grátis -->
+      <div class="shipping-progress">
+        <div class="shipping-progress__bar-wrap">
+          <div id="shipping-bar" class="shipping-progress__bar" style="width:0%"></div>
+        </div>
+      </div>
+
+      <!-- linhas de valores -->
+      <div class="summary-lines"> 
+        <div class="summary-line">
+          <span class="summary-line__label">Subtotal</span>
+          <span class="summary-line__value" id="summary-subtotal">R$ 0,00</span>
+        </div>
+        <div class="summary-line">
+          <span class="summary-line__label">Taxa de entrega</span>
+          <span class="summary-line__value" id="summary-delivery">–</span>
+        </div>
+        <div class="summary-line summary-line--discount" id="summary-discount-row" style="display:none;">
+          <span class="summary-line__label">Desconto</span>
+          <span class="summary-line__value" id="summary-discount">– R$ 0,00</span>
+        </div>
+      </div>
+
+      <!-- total -->
+      <div class="summary-total">
+        <span>Total</span>
+        <span class="summary-total__value" id="summary-total">R$ 0,00</span>
+      </div>
+      <p id="free-shipping-msg" class="free-shipping-msg"></p>
+
+      <button id="checkout-btn" class="btn btn--primary">
+        Ir para Pagamento
+      </button>
+
+      <button
+        id="limpar-carrinho"
+        class="btn btn--ghost"
+        style="width:100%; margin-top:8px; text-align:center;"
+      >
+        Limpar carrinho
+      </button>
+    </div>
+
+  </div>
+   </main>
+
+   <!-- Footer Início -->
+  <footer class="footer">
+    <div class="footer__top">
+  
+      <!-- Coluna: Endereço -->
+      <div class="footer__col">
+        <div class="footer__col-header">
+          <div class="footer__col-icon">
+            <img src="../assets/images/pin.svg" alt="">
+          </div>
+          <span class="footer__col-title">Endereço</span>
+        </div>
+        <div class="footer__col-body">
+          <p>Rua das Cerejeiras, 456</p>
+          <p>Liberdade, São Paulo – SP</p>
+          <p>CEP: 01503-001</p>
+        </div>
+      </div>
+  
+      <div class="footer__divider-v"></div>
+  
+      <!-- Coluna: Contato -->
+      <div class="footer__col">
+        <div class="footer__col-header">
+          <div class="footer__col-icon">
+            <img src="../assets/images/phone.svg" alt="">
+          </div>
+          <span class="footer__col-title">Contato</span>
+        </div>
+        <div class="footer__col-body">
+          <p><a href="tel:+551134567890">(11) 3456-7890</a></p>
+          <p><a href="mailto:contato@nusushi.com.br">contato@nusushi.com.br</a></p>
+          <div class="footer__social">
+            <!-- Instagram -->
+            <a class="footer__social-link" href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a class="footer__social-link" href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer__divider-v"></div>
+  
+      <!-- Coluna: Horário -->
+      <div class="footer__col">
+        <div class="footer__col-header">
+          <div class="footer__col-icon">
+            <img src="../assets/images/clock.svg" alt="">
+          </div>
+          <span class="footer__col-title">Horário de Funcionamento</span>
+        </div>
+        <div class="footer__col-body">
+          <div class="footer__schedule-item">
+            <span class="footer__schedule-days">Segunda a Sexta</span>
+            <span class="footer__schedule-hours">11h – 23h</span>
+          </div>
+          <div class="footer__schedule-item">
+            <span class="footer__schedule-days">Sábado e Domingo</span>
+            <span class="footer__schedule-hours">12h – 00h</span>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="footer__divider-h"></div>
+  
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 <span>Nu Sushi</span>. Tradição japonesa desde 1995.</p>
+    </div>
+  </footer>
+</body>
+</html>

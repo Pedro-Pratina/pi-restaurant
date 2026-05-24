@@ -7,126 +7,240 @@
   <title>Nu Sushi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-  </style>
+  
+  <script src="script.js" defer></script>
 </head>
 <body>
- 
+  <!-- Header Início -->
+  <header>
+    <nav class="mobile">
+      <a href="/index.html" class="logo">Nu Sushi</a>
+      <button type="button" class="menu-toggle" aria-label="Abrir menu">
+        <img src="./assets/images/menu.svg" alt="Menu">
+      </button>
+      <div class="menu_mobile" aria-label="Menu móvel">
+        <a href="/index.html">Home</a>
+        <a href="./pages/cardapio.html">Cardápio</a>
+        <a href="./pages/carrinho.html">Carrinho</a>
+        <a href="./pages/login.html">Login</a>
+      </div>
+    </nav>
+    <nav class="desk">
+      <a href="/index.html" class="logo">Nu Sushi</a>
+
+      <div class="paginas">
+        <a data-page="home" href="/index.html">Home</a>
+        <a data-page="cardapio" href="./pages/cardapio.html">Cardápio</a>
+      </div>
+
+      <div class="nav_icons paginas">
+        <a href="./pages/carrinho.html">
+          <img src="./assets/images/cart.svg" alt="Carrinho">
+        </a>
+        <a href="./pages/login.html">
+          <img src="./assets/images/person.svg" alt="Login">
+        </a>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Fim -->
+
   <!-- Hero -->
-  <section class="hero">
-    <div class="hero__bg">
-      <img
-        src="https://images.unsplash.com/photo-1630748662890-11623a758d6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwc3VzaGklMjBwbGF0dGVyJTIwamFwYW5lc2V8ZW58MXx8fHwxNzcyNzY1NTM1fDA&ixlib=rb-4.1.0&q=80&w=1080"
-        alt="Premium Sushi"
-      />
-      <div class="hero__overlay"></div>
-    </div>
- 
-    <div class="hero__content">
-      <h1>
-        Tradição Japonesa<br />
-        Sabor Autêntico
-      </h1>
-      <p>Experiência gastronômica premium desde 1995</p>
-      <a href="#cardapio" class="btn-primary">
-        Ver Cardápio
-        <span>›</span>
-      </a>
-    </div>
-  </section>
- 
-  <!-- História -->
-  <section class="historia">
-    <div class="historia__grid">
-      <div>
-        <h2>Nossa História</h2>
-        <div class="text-muted">
-          <p>
-            Fundado em 1995, o Nu Sushi nasceu do sonho de trazer a
-            autêntica culinária japonesa para o coração de São Paulo. Com
-            mais de 25 anos de tradição, mantemos o compromisso com a
-            qualidade e frescor dos ingredientes.
-          </p>
-          <p>
-            Nosso chef, Takeshi Yamamoto, traz consigo décadas de
-            experiência e técnicas tradicionais aprendidas em Tóquio,
-            garantindo que cada prato seja uma verdadeira obra de arte
-            culinária.
-          </p>
-          <p>
-            Acreditamos que comer sushi é mais do que uma refeição – é uma
-            experiência que conecta tradição, qualidade e respeito pelos
-            ingredientes.
-          </p>
+   <main>
+     <section class="hero">
+       <div class="hero__bg">
+         <img
+           src="https://images.unsplash.com/photo-1630748662890-11623a758d6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwc3VzaGklMjBwbGF0dGVyJTIwamFwYW5lc2V8ZW58MXx8fHwxNzcyNzY1NTM1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+           alt="Premium Sushi"
+         />
+         <div class="hero__overlay"></div>
+       </div>
+    
+       <div class="hero__content">
+         <h1>
+           Tradição Japonesa<br />
+           Sabor Autêntico
+         </h1>
+         <p>Experiência gastronômica premium desde 1995</p>
+         <a href="#cardapio" class="btn-primary">
+           Ver Cardápio
+           <span>›</span>
+         </a>
+       </div>
+     </section>
+    
+     <!-- História -->
+     <section class="historia">
+       <div class="historia__grid">
+         <div>
+           <h2>Nossa História</h2>
+           <div class="text-muted">
+             <p>
+               Fundado em 1995, o Nu Sushi nasceu do sonho de trazer a
+               autêntica culinária japonesa para o coração de São Paulo. Com
+               mais de 25 anos de tradição, mantemos o compromisso com a
+               qualidade e frescor dos ingredientes.
+             </p>
+             <p>
+               Nosso chef, Takeshi Yamamoto, traz consigo décadas de
+               experiência e técnicas tradicionais aprendidas em Tóquio,
+               garantindo que cada prato seja uma verdadeira obra de arte
+               culinária.
+             </p>
+             <p>
+               Acreditamos que comer sushi é mais do que uma refeição – é uma
+               experiência que conecta tradição, qualidade e respeito pelos
+               ingredientes.
+             </p>
+           </div>
+         </div>
+         <div class="historia__img">
+           <img
+             src="https://images.unsplash.com/photo-1681270527819-6b97ec33a67f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqYXBhbmVzZSUyMHJlc3RhdXJhbnQlMjBjaGVmfGVufDF8fHx8MTc3Mjc2NTU0MXww&ixlib=rb-4.1.0&q=80&w=1080"
+             alt="Chef Takeshi"
+           />
+         </div>
+       </div>
+     </section>
+    
+     <!-- Galeria -->
+     <section class="galeria">
+       <div class="galeria__inner">
+         <h2>Nosso Ambiente</h2>
+         <div class="galeria__grid">
+           <div class="galeria__item">
+             <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Ambiente 1" />
+           </div>
+           <div class="galeria__item">
+             <img src="https://images.unsplash.com/photo-1707202282188-f8d03b2791b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Ambiente 2" />
+           </div>
+           <div class="galeria__item">
+             <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Ambiente 3" />
+           </div>
+         </div>
+       </div>
+     </section>
+    
+     <!-- Avaliações -->
+     <section class="avaliacoes">
+       <h2>O Que Nossos Clientes Dizem</h2>
+       <div class="reviews__grid">
+    
+         <div class="review-card">
+           <div class="review-card__stars">★★★★★</div>
+           <p class="review-card__text">O melhor sushi que já comi em São Paulo. A combinação de ingredientes frescos e técnica impecável torna cada visita uma experiência inesquecível.</p>
+           <div class="review-card__author">Mariana S.</div>
+         </div>
+    
+         <div class="review-card">
+           <div class="review-card__stars">★★★★★</div>
+           <p class="review-card__text">Ambiente acolhedor e serviço impecável. O omakase do Chef Takeshi é uma verdadeira jornada pela culinária japonesa tradicional.</p>
+           <div class="review-card__author">Ricardo M.</div>
+         </div>
+    
+         <div class="review-card">
+           <div class="review-card__stars">★★★★★</div>
+           <p class="review-card__text">Frescor incomparável nos ingredientes e apresentação artística em cada prato. Vale cada centavo para quem aprecia o sushi de verdade.</p>
+           <div class="review-card__author">Fernanda T.</div>
+         </div>
+    
+         <div class="review-card">
+           <div class="review-card__stars">★★★★★</div>
+           <p class="review-card__text">Já visitei restaurantes japoneses em Tóquio e o Nu Sushi está no mesmo nível. Uma raridade em São Paulo que merece toda a atenção.</p>
+           <div class="review-card__author">Carlos N.</div>
+         </div>
+    
+       </div>
+     </section>
+    
+     <!-- CTA Final -->
+     <section class="cta" id="cardapio">
+       <div class="cta__inner">
+         <h2>Pronto para experimentar?</h2>
+         <p>Faça seu pedido online e receba em casa ou retire no local</p>
+         <a href="./pages/cardapio.html" class="btn-outline">Fazer Pedido Agora</a>
+       </div>
+     </section>
+   </main>
+   <footer class="footer">
+      <div class="footer__top">
+    
+        <!-- Coluna: Endereço -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/pin.svg" alt="">
+            </div>
+            <span class="footer__col-title">Endereço</span>
+          </div>
+          <div class="footer__col-body">
+            <p>Rua das Cerejeiras, 456</p>
+            <p>Liberdade, São Paulo – SP</p>
+            <p>CEP: 01503-001</p>
+          </div>
         </div>
-      </div>
-      <div class="historia__img">
-        <img
-          src="https://images.unsplash.com/photo-1681270527819-6b97ec33a67f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqYXBhbmVzZSUyMHJlc3RhdXJhbnQlMjBjaGVmfGVufDF8fHx8MTc3Mjc2NTU0MXww&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Chef Takeshi"
-        />
-      </div>
-    </div>
-  </section>
- 
-  <!-- Galeria -->
-  <section class="galeria">
-    <div class="galeria__inner">
-      <h2>Nosso Ambiente</h2>
-      <div class="galeria__grid">
-        <div class="galeria__item">
-          <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Ambiente 1" />
+    
+        <div class="footer__divider-v"></div>
+    
+        <!-- Coluna: Contato -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/phone.svg" alt="">
+            </div>
+            <span class="footer__col-title">Contato</span>
+          </div>
+          <div class="footer__col-body">
+            <p><a href="tel:+551134567890">(11) 3456-7890</a></p>
+            <p><a href="mailto:contato@nusushi.com.br">contato@nusushi.com.br</a></p>
+            <div class="footer__social">
+              <!-- Instagram -->
+              <a class="footer__social-link" href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a class="footer__social-link" href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="galeria__item">
-          <img src="https://images.unsplash.com/photo-1707202282188-f8d03b2791b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Ambiente 2" />
+    
+        <div class="footer__divider-v"></div>
+    
+        <!-- Coluna: Horário -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/clock.svg" alt="">
+            </div>
+            <span class="footer__col-title">Horário de Funcionamento</span>
+          </div>
+          <div class="footer__col-body">
+            <div class="footer__schedule-item">
+              <span class="footer__schedule-days">Segunda a Sexta</span>
+              <span class="footer__schedule-hours">11h – 23h</span>
+            </div>
+            <div class="footer__schedule-item">
+              <span class="footer__schedule-days">Sábado e Domingo</span>
+              <span class="footer__schedule-hours">12h – 00h</span>
+            </div>
+          </div>
         </div>
-        <div class="galeria__item">
-          <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Ambiente 3" />
-        </div>
+    
       </div>
-    </div>
-  </section>
- 
-  <!-- Avaliações -->
-  <section class="avaliacoes">
-    <h2>O Que Nossos Clientes Dizem</h2>
-    <div class="reviews__grid">
- 
-      <div class="review-card">
-        <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__text">O melhor sushi que já comi em São Paulo. A combinação de ingredientes frescos e técnica impecável torna cada visita uma experiência inesquecível.</p>
-        <div class="review-card__author">Mariana S.</div>
+    
+      <div class="footer__divider-h"></div>
+    
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 <span>Nu Sushi</span>. Tradição japonesa desde 1995.</p>
       </div>
- 
-      <div class="review-card">
-        <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__text">Ambiente acolhedor e serviço impecável. O omakase do Chef Takeshi é uma verdadeira jornada pela culinária japonesa tradicional.</p>
-        <div class="review-card__author">Ricardo M.</div>
-      </div>
- 
-      <div class="review-card">
-        <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__text">Frescor incomparável nos ingredientes e apresentação artística em cada prato. Vale cada centavo para quem aprecia o sushi de verdade.</p>
-        <div class="review-card__author">Fernanda T.</div>
-      </div>
- 
-      <div class="review-card">
-        <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__text">Já visitei restaurantes japoneses em Tóquio e o Nu Sushi está no mesmo nível. Uma raridade em São Paulo que merece toda a atenção.</p>
-        <div class="review-card__author">Carlos N.</div>
-      </div>
- 
-    </div>
-  </section>
- 
-  <!-- CTA Final -->
-  <section class="cta" id="cardapio">
-    <div class="cta__inner">
-      <h2>Pronto para experimentar?</h2>
-      <p>Faça seu pedido online e receba em casa ou retire no local</p>
-      <a href="./pages/cardapio.html" class="btn-outline">Fazer Pedido Agora</a>
-    </div>
-  </section>
- 
+    </footer>
 </body>
 </html>

@@ -14,15 +14,15 @@ input {
   padding: 0 1rem;
 }
 
-/* PAGE */
-.menu-page {
-  min-height: 100vh;
+.header-container {
+  background: #f5f5f5;
+  padding: 3rem;
 }
 
-/* HEADER */
-header.menu-header {
-  background: #f5f5f5;
-  padding: 3rem 0;
+/* PAGE */
+
+.menu-page {
+  min-height: 100vh;
 }
 
 .menu-title {
@@ -36,7 +36,7 @@ header.menu-header {
 
 /* CONTENT */
 main.menu-content {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 /* SEARCH */
@@ -173,7 +173,7 @@ figure.product-image-wrapper {
   flex: 1; /* empurra o footer para o final do card */
 }
 
-footer.product-footer {
+.product-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
