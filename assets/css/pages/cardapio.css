@@ -185,6 +185,9 @@ figure.product-image-wrapper {
   font-weight: bold;
 }
 
+
+/*BOTÃO ADICIONAR/REMOVER*/
+
 .product-button {
   display: flex;
   align-items: center;
@@ -196,6 +199,11 @@ figure.product-image-wrapper {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.product-button.clicked {
+  background: var(--color-home-btn-bg);
+  color: white;
 }
 
 .product-button:hover {

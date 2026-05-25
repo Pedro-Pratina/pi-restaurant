@@ -18,4 +18,19 @@
     /* ==== Home CTA   ==== */
     --color-cta-bg: #dc2626;
     --color-cta-label: #dc2626;
+
+    /* ==== Carrinho ==== */
+    --bg:           #F5F5F5;
+    --surface:      #ffffff;
+    --border:       rgba(0,0,0,0.08);
+    --primary:      #c0392b;
+    --primary-dark: #a93226;
+    --secondary:    #1a1a1a;
+    --muted:        #888;
+    --green:        #27ae60;
+    --destructive:  #e74c3c;
+    --radius:       12px;
+    --shadow:       0 2px 16px rgba(0,0,0,0.07);
+    --primary-tint: rgba(192,57,43,0.06);
+
 }

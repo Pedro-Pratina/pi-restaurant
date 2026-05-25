@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/pages/pagamento.css" />
+    <title>Nu Sushi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+    <script type="module" src="../assets/scripts/pagamento.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Início -->
+    <header>
+      <nav class="mobile">
+        <a href="/index.html" class="logo">Nu Sushi</a>
+        <button type="button" class="menu-toggle" aria-label="Abrir menu">
+          <img src="../assets/images/menu.svg" alt="Menu" />
+        </button>
+        <div class="menu_mobile" aria-label="Menu móvel">
+          <a href="/index.html">Home</a>
+          <a href="./cardapio.html">Cardápio</a>
+          <a href="./carrinho.html">Carrinho</a>
+          <a href="./login.html">Login</a>
+        </div>
+      </nav>
+      <nav class="desk">
+        <a href="/index.html" class="logo">Nu Sushi</a>
+
+        <div class="paginas">
+          <a data-page="home" href="/index.html">Home</a>
+          <a data-page="cardapio" href="./cardapio.html">Cardápio</a>
+        </div>
+
+        <div class="nav_icons paginas">
+          <a href="./carrinho.html">
+            <img src="../assets/images/cart.svg" alt="Carrinho" />
+          </a>
+          <a href="./login.html">
+            <img src="../assets/images/person.svg" alt="Login" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- Header Fim -->
+    <main class="checkout-page">
+      <h1 class="checkout-page__title">Finalizar Pedido</h1>
+
+      <form id="checkout-form" class="checkout-form" novalidate>
+        <!-- ── 1. MÉTODO DE ENTREGA ──────────────────────────────── -->
+        <div class="card">
+          <h2 class="card__title">Método de Entrega</h2>
+          <div class="method-grid method-grid--2">
+            <button
+              type="button"
+              class="method-btn active"
+              data-delivery="entrega"
+            >
+              <!-- map-pin -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 21s-7-6.75-7-11a7 7 0 0 1 14 0c0 4.25-7 11-7 11z"
+                />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+              Entrega
+            </button>
+
+            <button type="button" class="method-btn" data-delivery="retirada">
+              <!-- store -->
+              <svg viewBox="0 0 24 24">
+                <path d="M3 9l1-5h16l1 5" />
+                <path
+                  d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"
+                />
+                <path d="M5 9v11h14V9" />
+                <path d="M9 21v-6h6v6" />
+              </svg>
+              Retirada no Local
+            </button>
+          </div>
+        </div>
+
+        <!-- ── 2. ENDEREÇO (visível só se entrega) ───────────────── -->
+        <div class="card" id="card-address">
+          <h2 class="card__title">Endereço de Entrega</h2>
+          <div class="address-grid">
+            <div class="field full">
+              <label for="addr-street">Rua</label>
+              <input
+                id="addr-street"
+                type="text"
+                placeholder="Ex: Rua das Cerejeiras"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="addr-number">Número</label>
+              <input
+                id="addr-number"
+                type="text"
+                placeholder="Ex: 456"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="addr-complement">Complemento</label>
+              <input
+                id="addr-complement"
+                type="text"
+                placeholder="Apto, bloco…"
+              />
+            </div>
+
+            <div class="field">
+              <label for="addr-neighborhood">Bairro</label>
+              <input
+                id="addr-neighborhood"
+                type="text"
+                placeholder="Ex: Liberdade"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="addr-city">Cidade</label>
+              <input id="addr-city" type="text" value="São Paulo" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 3. FORMA DE PAGAMENTO ─────────────────────────────── -->
+        <div class="card">
+          <h2 class="card__title">Forma de Pagamento</h2>
+          <div class="method-grid method-grid--3">
+            <button
+              type="button"
+              class="method-btn active"
+              data-payment="cartao-credito"
+            >
+              <!-- credit-card -->
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+                <line x1="2" y1="10" x2="22" y2="10" />
+              </svg>
+              Cartão de Crédito
+            </button>
+
+            <button type="button" class="method-btn" data-payment="pix">
+              <!-- smartphone / pix -->
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5" />
+              </svg>
+              PIX
+            </button>
+
+            <button type="button" class="method-btn" data-payment="dinheiro">
+              <!-- banknote -->
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="6" width="20" height="12" rx="2" />
+                <circle cx="12" cy="12" r="2.5" />
+                <path d="M6 12h.01M18 12h.01" />
+              </svg>
+              Dinheiro
+            </button>
+          </div>
+        </div>
+
+        <!-- ── 4. RESUMO DO PEDIDO ───────────────────────────────── -->
+        <div class="card">
+          <h2 class="card__title">Resumo do Pedido</h2>
+
+          <div id="order-items" class="order-items"></div>
+
+          <div class="order-totals">
+            <div class="order-totals__line">
+              <span>Subtotal</span>
+              <span id="summ-subtotal">R$ 0,00</span>
+            </div>
+            <div class="order-totals__line">
+              <span>Taxa de entrega</span>
+              <span id="summ-delivery">–</span>
+            </div>
+            <div class="order-totals__line order-totals__line--total">
+              <span>Total</span>
+              <span class="val" id="summ-total">R$ 0,00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 5. BOTÃO FINALIZAR ────────────────────────────────── -->
+        <button type="submit" class="btn-submit">
+          <!-- check -->
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+          Finalizar Pedido
+        </button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__top">
+        <!-- Coluna: Endereço -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/pin.svg" alt="" />
+            </div>
+            <span class="footer__col-title">Endereço</span>
+          </div>
+          <div class="footer__col-body">
+            <p>Rua das Cerejeiras, 456</p>
+            <p>Liberdade, São Paulo – SP</p>
+            <p>CEP: 01503-001</p>
+          </div>
+        </div>
+
+        <div class="footer__divider-v"></div>
+
+        <!-- Coluna: Contato -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/phone.svg" alt="" />
+            </div>
+            <span class="footer__col-title">Contato</span>
+          </div>
+          <div class="footer__col-body">
+            <p><a href="tel:+551134567890">(11) 3456-7890</a></p>
+            <p>
+              <a href="mailto:contato@nusushi.com.br">contato@nusushi.com.br</a>
+            </p>
+            <div class="footer__social">
+              <!-- Instagram -->
+              <a class="footer__social-link" href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="0.5"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a class="footer__social-link" href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__divider-v"></div>
+
+        <!-- Coluna: Horário -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/clock.svg" alt="" />
+            </div>
+            <span class="footer__col-title">Horário de Funcionamento</span>
+          </div>
+          <div class="footer__col-body">
+            <div class="footer__schedule-item">
+              <span class="footer__schedule-days">Segunda a Sexta</span>
+              <span class="footer__schedule-hours">11h – 23h</span>
+            </div>
+            <div class="footer__schedule-item">
+              <span class="footer__schedule-days">Sábado e Domingo</span>
+              <span class="footer__schedule-hours">12h – 00h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__divider-h"></div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          © 2026 <span>Nu Sushi</span>. Tradição japonesa desde 1995.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

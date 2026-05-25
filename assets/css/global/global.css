@@ -10,6 +10,7 @@ header {
   padding: 1.5rem 1.25rem;
   font-family: "Playfair Display", serif;
   font-size: 1.5rem;
+  background: white;
 }
 
 nav.mobile,
@@ -162,7 +163,6 @@ nav.desk .paginas a.active {
 }
 
 .footer__col-title {
-  font-family: "Noto Serif JP", serif;
   font-size: 15px;
   font-weight: 600;
   color: #f0f0f0;
@@ -183,7 +183,7 @@ nav.desk .paginas a.active {
 }
 
 .footer__col-body a:hover {
-  color: #e8c49a;
+  color: #fff;
 }
 
 /* horário com highlight */
@@ -229,7 +229,7 @@ nav.desk .paginas a.active {
 }
 
 .footer__social-link:hover {
-  border-color: #e8c49a;
+  border-color: #fff;
   background: rgba(232, 196, 154, 0.08);
 }
 
@@ -243,7 +243,7 @@ nav.desk .paginas a.active {
 }
 
 .footer__social-link:hover svg {
-  stroke: #e8c49a;
+  stroke: #fff;
 }
 
 /* linha divisória horizontal */

@@ -106,28 +106,3 @@ export const CartStore = (() => {
 
   return { getState, addItem, updateQuantity, removeItem, clear };
 })();
-
-function adicionarAoCarrinho() {
-  const buttons = document.querySelectorAll('.product-button');
-
-  buttons.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('.product-card');
-
-      const name = card.querySelector('.product-title').textContent;
-      const price = card.querySelector('.product-price data').value;
-      const image = card.querySelector('.product-image').src;
-
-      const id = card.dataset.id;; // simples, mas funcional
-
-      CartStore.addItem({
-        id,
-        name,
-        price: parseFloat(price),
-        image
-      });
-    });
-  });
-}
-
-adicionarAoCarrinho();

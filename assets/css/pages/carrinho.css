@@ -1,3 +1,7 @@
+body {
+  background: var(--bg);
+}
+
 .cart-page {
   max-width: 1200px;
   margin: 0 auto;
@@ -197,6 +201,12 @@
   box-shadow: var(--shadow);
   position: sticky;
   top: 24px;
+}
+
+a.cart-summary__link {
+  color: var(--surface);
+  text-decoration: none;
+  transition: color var(--transition);
 }
 
 .cart-summary__title {

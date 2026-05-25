@@ -5,6 +5,8 @@
  * ─────────────────────────────────────────────────────────────
  */
 import { CartStore } from '../scripts/carrinho-loja.js';
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Referências DOM ──────────────────────────────────────────
@@ -31,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function render() {
     const { items, subtotal, deliveryFee } = CartStore.getState();
-    console.log('Estado do carrinho:', { items, subtotal, deliveryFee, discount });
     const total = subtotal + deliveryFee - discount;
 
     if (items.length === 0) {
@@ -164,14 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
   $couponBtn.addEventListener('click', applyCoupon);
   $couponInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') applyCoupon();
-  });
-
-  // ── Checkout ─────────────────────────────────────────────────
-
-  $checkoutBtn.addEventListener('click', () => {
-    // Aqui você navegaria para /checkout ou abre um modal.
-    // O CartStore continua disponível lá via localStorage.
-    alert('Redirecionando para o checkout...\n\nEm produção: window.location.href = "/checkout"');
   });
 
   // ── Reage a mudanças externas (ex: cardápio adicionando itens) ─
