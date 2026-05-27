@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <title>Nu Sushi</title>
-        <link rel="stylesheet" href="Css login.css">
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
 
-    <body>
-        <div class="container">
-            <img src="c:\Users\thecr\OneDrive\Área de Trabalho\Trabalho Sushi\Adobe Express - file.png">
+  <link rel="stylesheet" href="../assets/css/pages/login.css" />
+</head>
+<body>
+
+  <main class="login-container">
+    <section class="login-card">
+
+      <div class="login-header">
+        <div class="logo">
+          <span>櫻</span>
         </div>
-        <div class="card">
 
-            <h1>Bem-vindo</h1>
+        <h1>Bem-vindo de volta</h1>
 
-            <p>Entre para realizar seu pedido</p>
+        <p>
+          Entre para continuar seu pedido
+        </p>
+      </div>
 
-            <label>E-mail</label>
-            <input type="email">
+      <form id="loginForm" class="login-form">
 
-            <label>Senha</label>
-            <input type="password">
+        <div class="form-group">
+          <label for="email">E-mail</label>
 
-            <button>Entrar</button>
-
-            <div class="cadastro">
-                Não tem uma conta?
-                <a href="">Cadastre-se</a>
-            </div>
+          <input
+            type="email"
+            id="email"
+            placeholder="seu@email.com"
+            required
+          />
         </div>
-    </body>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Entrar
+        </button>
+
+      </form>
+
+      <div class="register-text">
+        <p>
+          Não tem uma conta?
+          <button class="register-btn">
+            Cadastre-se
+          </button>
+        </p>
+      </div>
+
+      <div class="demo-box">
+        <p>
+          <strong>Demo:</strong>
+          Use qualquer e-mail e senha para entrar
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../assets/scripts/login.js"></script>
+</body>
 </html>

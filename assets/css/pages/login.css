@@ -1,67 +1,172 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.card{
-
-    width: 350px;
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-}
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 230px;
-    height: 230px;
-}
-h1{
-    text-align: center;
-    margin-bottom: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p{
-    text-align: center;
-    color: gray;
-    margin-bottom: 30px;
+:root {
+  --primary: #c40021;
+  --secondary: #1f2937;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --blue-bg: #eff6ff;
+  --blue-border: #bfdbfe;
+  --blue-text: #1e40af;
 }
 
-label{
-    font-weight: bold;
-    text-align: center;
-}
-input{
-    text-align: center;
-    width: 100%;
-    height: 40px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding-left: 10px;
-    font-size: 15px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--muted);
 }
 
-button{
-    width: 100%;
-    height: 45px;
-    border: none;
-    background-color: #c40021;
-    color: white;
-    border-radius: 5px;
-    font-size: 16px;
+.login-container {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
 }
 
-.cadastro{
-    text-align: center;
-    margin-top: 20px;
+.login-card {
+  width: 100%;
+  max-width: 420px;
+
+  background-color: white;
+
+  padding: 32px;
+
+  border-radius: 12px;
 }
 
-.cadastro a{
-    color: #4400ff;
-    font-weight: bold;
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
+.logo {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+
+  background-color: var(--primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo span {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.login-header h1 {
+  font-size: 28px;
+  color: var(--secondary);
+
+  margin-bottom: 8px;
+}
+
+.login-header p {
+  color: var(--muted-foreground);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input {
+  padding: 14px 16px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.15);
+}
+
+.btn-primary {
+  border: none;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  background-color: var(--primary);
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.register-text {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.register-text p {
+  font-size: 14px;
+  color: var(--muted-foreground);
+}
+
+.register-btn {
+  background: none;
+  border: none;
+
+  color: var(--primary);
+
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  text-decoration: underline;
+}
+
+.demo-box {
+  margin-top: 24px;
+
+  padding: 16px;
+
+  border: 1px solid var(--blue-border);
+  border-radius: 10px;
+
+  background-color: var(--blue-bg);
+}
+
+.demo-box p {
+  font-size: 14px;
+  color: var(--blue-text);
+}
