@@ -11,5 +11,5 @@ form.addEventListener('submit', function (event) {
 
   alert('Login realizado com sucesso!');
 
-  window.location.href = '/perfil.html';
+  window.location.href = './perfil.html';
 });

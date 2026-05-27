@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Perfil</title>
+
+  <link rel="stylesheet" href="../assets/css/pages/perfil.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../assets/scripts/perfil.js" defer></script>
+</head>
+<body>
+
+  <!-- Tela deslogado -->
+  <section class="not-logged hidden" id="notLogged">
+    <div class="not-logged-content">
+      <h2>Você precisa estar logado</h2>
+
+      <button class="btn btn-primary">
+        Ir para o Cardápio
+      </button>
+    </div>
+  </section>
+
+  <!-- Perfil -->
+  <main class="profile-page" id="profilePage">
+
+    <div class="container">
+
+      <!-- Header -->
+      <header class="profile-header">
+        <h1>Meu Perfil</h1>
+
+        <button class="btn btn-outline" id="logoutBtn">
+          <i data-lucide="log-out"></i>
+          Sair
+        </button>
+      </header>
+
+      <section class="profile-grid">
+
+        <!-- Usuário -->
+        <aside class="profile-card">
+
+          <div class="user-top">
+            <div class="user-avatar">
+              <i data-lucide="user"></i>
+            </div>
+
+            <div>
+              <h2 id="userName">Pedro Henrique</h2>
+              <p>Cliente</p>
+            </div>
+          </div>
+
+          <div class="user-info">
+
+            <div class="info-item">
+              <i data-lucide="mail"></i>
+              <span id="userEmail">email@email.com</span>
+            </div>
+
+            <div class="info-item">
+              <i data-lucide="phone"></i>
+              <span id="userPhone">(11) 99999-9999</span>
+            </div>
+
+          </div>
+
+          <!-- Endereços -->
+          <div class="address-section">
+
+            <h3>
+              <i data-lucide="map-pin"></i>
+              Endereços Salvos
+            </h3>
+
+            <div class="addresses" id="addressesContainer">
+
+            </div>
+
+          </div>
+
+        </aside>
+
+        <!-- Pedidos -->
+        <section class="orders-card">
+
+          <h2 class="orders-title">
+            <i data-lucide="shopping-bag"></i>
+            Histórico de Pedidos
+          </h2>
+
+          <div id="ordersContainer"></div>
+
+        </section>
+
+      </section>
+
+    </div>
+
+  </main>
+</body>
+</html>
