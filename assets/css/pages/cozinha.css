@@ -1,0 +1,93 @@
+:root {
+    /* ==== Home ==== */
+    --color-home-title: #1c1917;
+    --color-home-btn-bg: #b91c1c;
+    --color-home-btn-hover: #dc2626;
+
+    /* ==== Home History ==== */
+    --color-history-text: #78716c;
+
+    /* ==== Home Gallery ==== */
+    --color-galeria-bg: #f5f5f4;
+
+    /* ==== Home Reviews ==== */
+    --color-review-text: #57534e;
+    --color-review-star: #f59e0b;
+    --color-review-border: #e7e5e4;
+
+    /* ==== Home CTA   ==== */
+    --color-cta-bg: #dc2626;
+    --color-cta-label: #dc2626;
+
+    /* ==== Carrinho ==== */
+    --bg:           #F5F5F5;
+    --surface:      #ffffff;
+    --border:       rgba(0,0,0,0.08);
+    --primary:      #c0392b;
+    --primary-dark: #a93226;
+    --secondary:    #1a1a1a;
+    --muted:        #888;
+    --green:        #27ae60;
+    --destructive:  #e74c3c;
+    --radius:       12px;
+    --shadow:       0 2px 16px rgba(0,0,0,0.07);
+    --primary-tint: rgba(192,57,43,0.06);
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    padding: 1.5rem;
+
+}
+
+.titlecontainer{
+    padding: 1.5rem 1.25rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    background-color: var(--bg);
+}
+
+.titlecontainer span{
+    font-size: 1.25rem;
+}
+
+.titlecontainer h1{
+    color: var(--color-home-title);
+}
+
+.titlecontainer span{
+    color: var(--color-review-text);
+}
+
+.cards{
+    width: 100%;
+}
+
+.cards .card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+    margin: 1rem;
+    background-color: white;
+    border-color: gray;
+    border-width: 16px;
+    border-radius: 0.5rem;
+}
+
+.cardtitle{
+    display: flex;
+    flex-direction: row;
+    margin-block: 0.25rem;
+}
+
+.horario{
+    margin-block: 0.25rem;
+}
+
+.endereco{
+    margin-block: 0.25rem;
+}
+
