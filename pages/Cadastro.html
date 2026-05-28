@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <title>Nu Sushi</title>
-        <link rel="stylesheet" href="../assets/css/style.css">
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nu Sushi</title>
 
-    <div class="card">
-    <body>
-    <h1>Olá, seja bem-vindo!</h1>
-    <p>Preencha os campos abaixo para criar sua conta</p>
+  <link rel="stylesheet" href="../assets/css/pages/cadastro.css" />
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <script src="../assets/scripts/cadastro.js" defer></script>
+</head>
+<body>
 
-<label>E-mail</label>
-    <input type="email">
+  <main class="cadastro-container">
+    <section class="cadastro-card">
+      <div class="top-actions">
+        <a href="../index.html" class="back-btn">
+          X
+        </a>
+      </div>
 
-<label>Senha</label>
-    <input type="password">
+      <div class="cadastro-header">
+        <div class="logo">
+          <img src="../assets/images/logo.png" alt="Logo Nu Sushi" />
+        </div>
 
-<button>Criar conta</button>
+        <h1>Crie sua conta!</h1>
 
-    </body>
+        <p>
+          Preencha os campos abaixo para criar sua conta
+        </p>
+      </div>
+
+      <form id="cadastroForm" class="cadastro-form">
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="seu@email.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Crie uma Senha</label>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirme a Senha</label>
+
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Cadastrar
+        </button>
+
+      </form>
+
+      <div class="register-text">
+        <p>
+          Já tem uma conta?
+          <a href="./login.html" class="register-btn">
+            Entrar
+          </a>
+        </p>
+      </div>
+
+      <div class="demo-box">
+        <p>
+          <strong>Demo:</strong>
+          Use qualquer e-mail e senha para entrar
+        </p>
+      </div>
+
+    </section>
+  </main>
+</body>
 </html>
