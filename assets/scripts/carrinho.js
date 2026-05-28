@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'PRIMEIRACOMPRA': 0.10,
       'SAKURA10':       0.10,
       'DESCONTO20':     0.20,
+      'ESCAMADO':       3.15,
+      'FAZOL':          -5.00,
     };
 
     if (COUPONS[code]) {

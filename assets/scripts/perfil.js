@@ -49,6 +49,7 @@ const orders = [
     ],
 
     total: 89.9,
+    pagamento: "Cartão de Crédito",
   },
 
   {
@@ -66,10 +67,11 @@ const orders = [
     ],
 
     total: 42.5,
+    pagamento: "Pix",
   },
 ];
 
-const isLoggedIn = true;
+const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
 const profilePage = document.getElementById("profilePage");
 const notLogged = document.getElementById("notLogged");
@@ -226,7 +228,8 @@ function getStatusText(status) {
 document
   .getElementById("logoutBtn")
   .addEventListener("click", () => {
-
+    localStorage.removeItem('userAtual');
+    localStorage.setItem('isLoggedIn', 'false');
     alert("Logout realizado!");
 
     location.reload();

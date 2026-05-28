@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meu Perfil</title>
 
+  <link rel="stylesheet" href="../assets/css/global/global.css" />
   <link rel="stylesheet" href="../assets/css/pages/perfil.css" />
   <link rel="icon" type="image/png" href="../assets/images/logo.png" />
 
@@ -13,13 +14,46 @@
     <script src="../assets/scripts/perfil.js" defer></script>
 </head>
 <body>
+  <header>
+    <nav class="mobile">
+      <a href="/index.html" class="logo">
+        <img src="./assets/images/logo.png" alt="Logo Nu Sushi" />
+      </a>
+      <button type="button" class="menu-toggle" aria-label="Abrir menu">
+        <img src="./assets/images/menu.svg" alt="Menu">
+      </button>
+      <div class="menu_mobile" aria-label="Menu móvel">
+        <a href="/index.html">Home</a>
+        <a href="./pages/cardapio.html">Cardápio</a>
+        <a href="./pages/carrinho.html">Carrinho</a>
+        <a href="./pages/login.html">Login</a>
+      </div>
+    </nav>
+    <nav class="desk">
+      <a href="/index.html" class="logo">Nu Sushi</a>
+
+      <div class="paginas">
+        <a data-page="home" href="/index.html">Home</a>
+        <a data-page="cardapio" href="./pages/cardapio.html">Cardápio</a>
+      </div>
+
+      <div class="nav_icons paginas">
+        <a href="../pages/carrinho.html">
+          <img src="../assets/images/cart.svg" alt="Carrinho">
+        </a>
+        <a href="../pages/login.html">
+          <img src="../assets/images/person.svg" alt="Login">
+        </a>
+      </div>
+    </nav>
+  </header>
 
   <!-- Tela deslogado -->
   <section class="not-logged hidden" id="notLogged">
     <div class="not-logged-content">
       <h2>Você precisa estar logado</h2>
 
-      <button class="btn btn-primary">
+      <button class="btn btn-primary" onclick="window.location.href='./cardapio.html'">
         Ir para o Cardápio
       </button>
     </div>
@@ -103,5 +137,85 @@
     </div>
 
   </main>
+     <footer class="footer">
+      <div class="footer__top">
+    
+        <!-- Coluna: Endereço -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/pin.svg" alt="">
+            </div>
+            <span class="footer__col-title">Endereço</span>
+          </div>
+          <div class="footer__col-body">
+            <p>Rua das Cerejeiras, 456</p>
+            <p>Liberdade, São Paulo – SP</p>
+            <p>CEP: 01503-001</p>
+          </div>
+        </div>
+    
+        <div class="footer__divider-v"></div>
+    
+        <!-- Coluna: Contato -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/phone.svg" alt="">
+            </div>
+            <span class="footer__col-title">Contato</span>
+          </div>
+          <div class="footer__col-body">
+            <p><a href="tel:+551134567890">(11) 3456-7890</a></p>
+            <p><a href="mailto:contato@nusushi.com.br">contato@nusushi.com.br</a></p>
+            <div class="footer__social">
+              <!-- Instagram -->
+              <a class="footer__social-link" href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a class="footer__social-link" href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer__divider-v"></div>
+    
+        <!-- Coluna: Horário -->
+        <div class="footer__col">
+          <div class="footer__col-header">
+            <div class="footer__col-icon">
+              <img src="./assets/images/clock.svg" alt="">
+            </div>
+            <span class="footer__col-title">Horário de Funcionamento</span>
+          </div>
+          <div class="footer__col-body">
+            <div class="footer__schedule-item">
+              <span class="footer__schedule-days">Segunda a Sexta</span>
+              <span class="footer__schedule-hours">11h – 23h</span>
+            </div>
+            <div class="footer__schedule-item">
+              <span class="footer__schedule-days">Sábado e Domingo</span>
+              <span class="footer__schedule-hours">12h – 00h</span>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="footer__divider-h"></div>
+    
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 <span>Nu Sushi</span>. Tradição japonesa desde 1995.</p>
+      </div>
+    </footer>
 </body>
 </html>

@@ -9,6 +9,15 @@ form.addEventListener('submit', function (event) {
   console.log('E-mail:', email);
   console.log('Senha:', password);
 
+  const usuario = JSON.parse(localStorage.getItem('usuario'));
+  const user = usuario.find(u => u.email === email && u.senha === password);
+  if (!user) {
+    alert('E-mail ou senha incorretos!');
+    return;
+  }
+
+  localStorage.setItem('userAtual', JSON.stringify(user));
+  localStorage.setItem('isLoggedIn', 'true');
   alert('Login realizado com sucesso!');
 
   window.location.href = './perfil.html';
