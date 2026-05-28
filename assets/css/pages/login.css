@@ -46,24 +46,24 @@ body {
 }
 
 .logo {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
 
   margin: 0 auto 16px;
 
   border-radius: 50%;
 
-  background-color: var(--primary);
+  background-color: white;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo span {
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
+.logo img {
+  width: 105%;
+  height: 105%;
+  object-fit: cover;
 }
 
 .login-header h1 {
