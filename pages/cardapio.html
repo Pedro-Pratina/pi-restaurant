@@ -15,6 +15,7 @@
     <script src="../script.js" defer></script>
     <script type="module" src="../assets/scripts/carrinho-loja.js" defer></script>
     <script type="module" src="../assets/scripts/cardapio.js" defer></script>
+    <script type="module" src="../assets/scripts/cardapio-filtros.js" defer></script>
     <script type="module" src="../assets/scripts/cart-badge.js" defer></script>
   </head>
   <body>
@@ -97,12 +98,12 @@
             </li>
             <li>
               <button class="category-button" aria-pressed="false">
-                Temaki
+                Nigiri
               </button>
             </li>
             <li>
               <button class="category-button" aria-pressed="false">
-                Pratos Quentes
+                Roll
               </button>
             </li>
             <li>
@@ -117,7 +118,7 @@
         <section>
           <ul class="products-grid" role="list">
             <!-- Product Card -->
-            <li class="product-card" data-id="sushi-premium-mix">
+            <li class="product-card" data-id="sushi-premium-mix" data-category="Sushi">
               <article>
                 <figure class="product-image-wrapper">
                   <img
@@ -149,7 +150,7 @@
             </li>
 
             <!-- Product Card -->
-            <li class="product-card" data-id="nigiri-salmao">
+            <li class="product-card" data-id="nigiri-salmao" data-category="Nigiri">
               <article>
                 <figure class="product-image-wrapper">
                   <img
@@ -181,7 +182,7 @@
             </li>
 
             <!-- Product Card -->
-            <li class="product-card" data-id="california-roll">
+            <li class="product-card" data-id="california-roll" data-category="Roll">
               <article>
                 <figure class="product-image-wrapper">
                   <img
@@ -214,6 +215,7 @@
           </ul>
         </section>
       </main>
+
       <footer class="footer">
         <div class="footer__top">
           <!-- Coluna: Endereço -->
