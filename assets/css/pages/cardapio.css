@@ -218,6 +218,10 @@ figure.product-image-wrapper {
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   ul.products-grid {
+    .logo img{
+        height: 4rem;
+        width: 4rem;
+    }
     grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -412,6 +412,11 @@ a.cart-summary__link {
 }
 
 @media (min-width: 769px) {
+  .logo img{
+        height: 4rem;
+        width: 4rem;
+    }
+    
   .cart-page {
     padding: 48px 32px 88px;
   }

@@ -4,29 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meu Perfil</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../assets/css/global/global.css" />
   <link rel="stylesheet" href="../assets/css/pages/perfil.css" />
+  <link rel="stylesheet" href="../assets/css/cart-badge.css" />
   <link rel="icon" type="image/png" href="../assets/images/logo.png" />
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../assets/scripts/perfil.js" defer></script>
+    <script type="module" src="../assets/scripts/cart-badge.js" defer></script>
 </head>
 <body>
   <header>
     <nav class="mobile">
       <a href="/index.html" class="logo">
-        <img src="./assets/images/logo.png" alt="Logo Nu Sushi" />
+        <img src="../assets/images/logo.png" alt="Logo Nu Sushi" />
       </a>
       <button type="button" class="menu-toggle" aria-label="Abrir menu">
-        <img src="./assets/images/menu.svg" alt="Menu">
+        <img src="../assets/images/menu.svg" alt="Menu">
       </button>
       <div class="menu_mobile" aria-label="Menu móvel">
         <a href="/index.html">Home</a>
-        <a href="./pages/cardapio.html">Cardápio</a>
-        <a href="./pages/carrinho.html">Carrinho</a>
-        <a href="./pages/login.html">Login</a>
+        <a href="./cardapio.html">Cardápio</a>
+        <a href="./carrinho.html">Carrinho</a>
+        <a href="./login.html">Login</a>
       </div>
     </nav>
     <nav class="desk">
@@ -38,10 +40,10 @@
       </div>
 
       <div class="nav_icons paginas">
-        <a href="../pages/carrinho.html">
+        <a href="./carrinho.html">
           <img src="../assets/images/cart.svg" alt="Carrinho">
         </a>
-        <a href="../pages/login.html">
+        <a href="./login.html">
           <img src="../assets/images/person.svg" alt="Login">
         </a>
       </div>
@@ -144,7 +146,7 @@
         <div class="footer__col">
           <div class="footer__col-header">
             <div class="footer__col-icon">
-              <img src="./assets/images/pin.svg" alt="">
+              <img src="../assets/images/pin.svg" alt="">
             </div>
             <span class="footer__col-title">Endereço</span>
           </div>
@@ -161,7 +163,7 @@
         <div class="footer__col">
           <div class="footer__col-header">
             <div class="footer__col-icon">
-              <img src="./assets/images/phone.svg" alt="">
+              <img src="../assets/images/phone.svg" alt="">
             </div>
             <span class="footer__col-title">Contato</span>
           </div>
@@ -170,7 +172,7 @@
             <p><a href="mailto:contato@nusushi.com.br">contato@nusushi.com.br</a></p>
             <div class="footer__social">
               <!-- Instagram -->
-              <a class="footer__social-link" href="#" aria-label="Instagram">
+              <a class="footer__social-link" href="https://www.instagram.com/explore/locations/106703481651206/nu-sushi-morumbi/" aria-label="Instagram">
                 <svg viewBox="0 0 24 24">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                   <circle cx="12" cy="12" r="4"/>
@@ -178,7 +180,7 @@
                 </svg>
               </a>
               <!-- Facebook -->
-              <a class="footer__social-link" href="#" aria-label="Facebook">
+              <a class="footer__social-link" href="https://www.facebook.com/nusushimorumbi/?locale=pt_BR" aria-label="Facebook">
                 <svg viewBox="0 0 24 24">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                 </svg>
@@ -193,7 +195,7 @@
         <div class="footer__col">
           <div class="footer__col-header">
             <div class="footer__col-icon">
-              <img src="./assets/images/clock.svg" alt="">
+              <img src="../assets/images/clock.svg" alt="">
             </div>
             <span class="footer__col-title">Horário de Funcionamento</span>
           </div>

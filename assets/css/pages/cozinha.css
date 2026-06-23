@@ -267,7 +267,11 @@ hr {
 /* RESPONSIVO */
 
 @media (max-width: 640px) {
-
+    .logo img{
+        height: 4rem;
+        width: 4rem;
+    }
+    
     main {
         padding: 1rem;
     }

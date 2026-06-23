@@ -5,19 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/pages/carrinho.css" />
+  <link rel="stylesheet" href="../assets/css/cart-badge.css" />
   <title>Nu Sushi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="../assets/images/logo.png" />
   <script src="../script.js" defer></script>
   <script type="module" src="../assets/scripts/carrinho.js" defer></script>
+  <script type="module" src="../assets/scripts/cart-badge.js" defer></script>
 </head>
 <body>
     <div class="content">
   <!-- Header Início -->
   <header>
     <nav class="mobile">
-      <a href="/index.html" class="logo">Nu Sushi</a>
+      <a href="/index.html" class="logo">
+        <img src="../assets/images/logo.png" alt="Logo Nu Sushi" />
+      </a>
       <button type="button" class="menu-toggle" aria-label="Abrir menu">
         <img src="../assets/images/menu.svg" alt="Menu">
       </button>
@@ -116,9 +120,9 @@
       </div>
       <p id="free-shipping-msg" class="free-shipping-msg"></p>
 
-      <button id="checkout-btn" class="btn btn--primary">
-        <a href="./pagamento.html" class="cart-summary__link">Ir para Pagamento</a>
-      </button>
+      <a id="checkout-btn" href="./pagamento.html" class="btn btn--primary cart-summary__link">
+        Ir para Pagamento
+      </a>
 
       <button
         id="limpar-carrinho"
@@ -166,7 +170,7 @@
           <p><a href="mailto:contato@nusushi.com.br">contato@nusushi.com.br</a></p>
           <div class="footer__social">
             <!-- Instagram -->
-            <a class="footer__social-link" href="#" aria-label="Instagram">
+            <a class="footer__social-link" href="https://www.instagram.com/explore/locations/106703481651206/nu-sushi-morumbi/" aria-label="Instagram">
               <svg viewBox="0 0 24 24">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                 <circle cx="12" cy="12" r="4"/>
@@ -174,7 +178,7 @@
               </svg>
             </a>
             <!-- Facebook -->
-            <a class="footer__social-link" href="#" aria-label="Facebook">
+            <a class="footer__social-link" href="https://www.facebook.com/nusushimorumbi/?locale=pt_BR" aria-label="Facebook">
               <svg viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
               </svg>
